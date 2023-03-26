@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const MeineZauber = () => {
   const [mySpell, setMySpell] = useState([]);
 
+
   useEffect(() => {
     // GET request using axios inside useEffect React hook
     axios
