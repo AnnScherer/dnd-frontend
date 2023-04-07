@@ -28,7 +28,7 @@ const Header = () => {
     setIsLoggedIn(false);
     setChange(!checkStatus);
     const response = await axios.get(
-      "http://localhost:3001/user/delete-cookie",
+      "https://dnd-spells-backend.vercel.app/user/delete-cookie",
       { withCredentials: true }
     );
     if (response) {
@@ -46,8 +46,11 @@ const Header = () => {
     });
     setFilteredSpells(spellFilter);
     setInhaltsverzeichnis([]);
+    navigate("/");
   };
-  const changeValue = (e) => setSearchSpell(e.target.value);
+  const changeValue = (e) => {
+    setSearchSpell(e.target.value);
+  };
 
   return (
     <nav role="navigation">

@@ -43,7 +43,7 @@ const Home = () => {
 
   const handleSaveSpell = async (egal) => {
     const response = await axios.post(
-      "http://localhost:3001/user/addspell",
+      "https://dnd-spells-backend.vercel.app/user/addspell",
       egal,
       { withCredentials: true }
     );

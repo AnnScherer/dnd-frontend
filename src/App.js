@@ -15,12 +15,14 @@ function App() {
   useEffect(() => {
     // GET request using axios inside useEffect React hook
     axios
-      .get("http://localhost:3001/user/spells")
+      .get("https://dnd-spells-backend.vercel.app/user/spells")
       .then((response) => setSpell(response.data))
       .catch((err) => console.log(err));
 
     axios
-      .get("http://localhost:3001/user/checkCookie", { withCredentials: true })
+      .get("https://dnd-spells-backend.vercel.app/user/checkCookie", {
+        withCredentials: true,
+      })
       .then((response) => setIsLoggedIn(response.data))
       .catch((err) => console.log(err));
     // empty dependency array means this effect will only run once (like componentDidMount in classes)

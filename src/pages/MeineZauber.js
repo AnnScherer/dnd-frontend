@@ -16,14 +16,14 @@ const MeineZauber = () => {
 
   const handleDeleteSpell = (egal) => {
     axios
-      .delete("http://localhost:3001/user/delete-spell", {
+      .delete("https://dnd-spells-backend.vercel.app/user/delete-spell", {
         headers: { spell: JSON.stringify(egal) },
         withCredentials: true,
       })
       .then((response) => {
         console.log(response);
         axios
-          .get("http://localhost:3001/user/user-spells", {
+          .get("https://dnd-spells-backend.vercel.app/user-spells", {
             withCredentials: true,
           })
           .then((response) => {
